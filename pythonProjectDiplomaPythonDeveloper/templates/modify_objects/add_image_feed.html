@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% extends 'modify_objects/base_generic.html' %}
+
+    {% block title %}Add Image{% endblock %}
+</head>
+<body>
+    {% block content %}
+    <h2 align="center">Загрузить изображение</h2><!--Upload Image-->
+
+    <form method="post" enctype="multipart/form-data" action="{% url 'add_image_feed' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <a href="{% url 'dashboard' %}" class="btn btn-primary mb-0">Назад</a>
+        <button type="submit" class="btn btn-primary">Загрузить</button><!--Upload-->
+    </form>
+    {% endblock %}
+</body>
+</html>

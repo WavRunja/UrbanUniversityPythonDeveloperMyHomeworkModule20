@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% extends 'modify_objects/base_generic.html' %}
+
+    {% block title %}Главная{% endblock %}<!--Home-->
+</head>
+<body>
+    {% block content %}
+    <div class="jumbotron text-center">
+        <h1>Добро пожаловать на платформу преобразования изображений</h1><!--Welcome to the Modify Objects Platform-->
+        <img src="media\default\photo.jpg" align="center" alt="Фотография профиля."></img>
+        <p>Приветствую Вас на моём сайте, меня зовут Владимир.</p><!--This is the home page of the application.-->
+        <p align="justify"><i>Я студент онлайн-университета <a href="https://urban-university.ru/">URBAN.</a>
+            Этот сайт мой дипломный проект. Он служит для преобразования ваших изображений в стиле картин Ван Гога.
+            Здесь используется Neural Style Transfer. Он служит для наложения стиля одного изображения на другое изображение.
+            Преобразует стиль изображения предобученная модель VGG-19.
+            Для преобразования вы можете загрузить на сайт не более девяти изображений и обработать их на панели инструментов.</i></p>
+        <p align="right"><u><b>Контакты:</b></u></p>
+        <p align="right"><b>E-mail:</b> <a href="mailto:pereverzew-wladimir@yandex.ru"><i>pereverzew-wladimir@yandex.ru</i></a></p>
+        <p align="right"><b>Telegram:</b> <a href="https://t.me/Vavrynja"><i>https://t.me/Vavrynja</i></a></p>
+        <p align="right"><b>GitHub:</b> <a href="https://github.com/WavRunja/"><i>https://github.com/WavRunja/</i></a></p>
+        <p></p>
+        <p align="right"><u><b>Начало моего пути в IT:</b></u></p>
+        <p align="right"><b>Мой канал, где я выкладывал информацию, как изучаю Swift:</b> <a href="https://t.me/Swift_Basics"><i>https://t.me/Swift_Basics</i></a></p>
+        <p align="right"><b>Мой канал: "Установка легкого клиента для тестовой сети TON в Ubuntu 18.04":</b> <a href="https://t.me/ton_test_liteclient_ubuntu_18_04"><i>https://t.me/ton_test_liteclient_ubuntu_18_04</i></a></p>
+        <p align="right"><b>Мой канал по Python:</b> <a href="https://t.me/Disciple_of_the_sorcerer"><i>https://t.me/Disciple_of_the_sorcerer</i></a></p>
+        <p align="right"><b>Мой канал по Arduino:</b> <a href="https://t.me/+RcvvwR6q_lAsFwDz"><i>https://t.me/+RcvvwR6q_lAsFwDz</i></a></p>
+        <p></p>
+        <a href="{% url 'dashboard' %}" class="btn btn-primary">Перейти к панели инструментов</a><!--Go to Dashboard-->
+    </div>
+    {% endblock %}
+</body>
+</html>

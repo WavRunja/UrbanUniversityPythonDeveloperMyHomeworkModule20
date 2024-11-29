@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Обработанное изображение</title>
+</head>
+<body>
+    <div class="container text-center mt-5">
+        <h2>Обработанное изображение</h2>
+        <img src="{{ image.processed_image.url }}" alt="Обработанное изображение" class="img-fluid">
+        <div class="mt-3">
+            <a href="{% url 'dashboard' %}" class="btn btn-primary">Назад</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% extends 'modify_objects/base_generic.html' %}
+
+    {% block title %}Панель инструментов{% endblock %}<!--Dashboard-->
+</head>
+<body>
+    {% block content %}
+    <h1 align="center">Панель инструментов</h1><!--Dashboard-->
+
+    <h2 align="center">Ваши изображения</h2><!--Your Images-->
+
+    <a href="{% url 'add_image_feed' %}" class="btn btn-primary mb-3">Добавить изображение</a><!--Add Image-->
+
+    <div class="row">
+        {% for image in images %}
+            <div class="col-md-4">
+                <div class="card mb-3">
+                    <h5 class="card-title text-center">Исходное изображение:</h5>
+                    <img src="{{ image.image.url }}" class="card-img-top" alt="Изображение">
+                    <div class="card-body">
+                        {% if image.processed_image and image.processed_image.url != "/media/default/default.png" %}
+                            <h5 class="card-title text-center">Обработанное изображение:</h5>
+                            <div class="card-body text-center">
+                                <a href="{% url 'view_processed_image' image.id %}">
+                                    <img src="{{ image.processed_image.url }}" alt="Обработанное изображение" width="200px">
+                                </a>
+                            </div>
+                        {% else %}
+                            <p class="card-text text-danger text-center">Изображение ещё не обработано.</p>
+                            <a href="{% url 'process_image' image.id %}" class="btn btn-success">Обработать изображение</a>
+                        {% endif %}
+                        <p></p>
+                        <p align="right"><a href="{% url 'delete_image' image.id %}" class="btn btn-danger mt-2">Удалить</a></p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+    {% endblock %}
+</body>
+</html>

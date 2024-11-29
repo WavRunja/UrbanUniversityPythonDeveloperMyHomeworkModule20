@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+    <link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+    <title>{% block title %}Платформа преобразования изображений{% endblock %}</title><!--\Modify Objects Platform-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="{% url 'home' %}">Главная</a><!--Home-->
+        <a class="nav-link" href="{% url 'dashboard' %}">Панель инструментов</a><!--Dashboard-->
+        {% if user.is_authenticated %}
+            <span class="navbar-text">Вы вошли как: {{ user.last_name }} {{ user.first_name }}</span><!--Logged in as-->
+            <a class="nav-link" href="{% url 'logout' %}">Выход</a><!--Logout-->
+        {% else %}
+            <a class="nav-link" href="{% url 'login' %}">Вход</a><!--Login-->
+            <a class="nav-link" href="{% url 'register' %}">Регистрация</a><!--Register-->
+        {% endif %}
+    </nav>
+
+    <div>
+        <img src="{% static 'images/header.jpg' %}" width="100%" alt="Заголовок" class="img-fluid">
+    </div>
+
+    <div class="container mt-4">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>
