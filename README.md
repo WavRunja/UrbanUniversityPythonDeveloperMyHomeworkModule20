@@ -49,7 +49,7 @@ Project/
 
 На главной странице (Рисунок 1.) отображается краткое приветствие и кнопка для перехода на Панель инструментов. Пользователь, не авторизованный в системе, перенаправляется на страницу входа при попытке зайти в Панель инструментов.
  
-![image_01.png](diploma/image_01.png)
+![image_01.png](pythonProjectDiplomaPythonDeveloper/diploma/image_01.png)
 
 _Рисунок 1. Домашняя страница._
 
@@ -67,11 +67,11 @@ _Рисунок 1. Домашняя страница._
 * Максимум 9 изображений на одного пользователя.
 * Загруженные изображения масштабируются до квадрата и разделяются на части для более точной обработки.
 
-![image_02.png](diploma/image_02.png)
+![image_02.png](pythonProjectDiplomaPythonDeveloper/diploma/image_02.png)
  
 _Рисунок 2. Панель инструментов._
 
-![image_03.png](diploma/image_03.png)
+![image_03.png](pythonProjectDiplomaPythonDeveloper/diploma/image_03.png)
  
 _Рисунок 3. Обработанное изображение._
 
@@ -84,11 +84,11 @@ _Рисунок 3. Обработанное изображение._
 
 Доступ к обработке изображений возможен только после авторизации.
 
-![image_04.png](diploma/image_04.png)
+![image_04.png](pythonProjectDiplomaPythonDeveloper/diploma/image_04.png)
 
 _Рисунок 4. Вход._
 
-![image_05.png](diploma/image_05.png)
+![image_05.png](pythonProjectDiplomaPythonDeveloper/diploma/image_05.png)
 
 _Рисунок 5. Регистрация._
 
